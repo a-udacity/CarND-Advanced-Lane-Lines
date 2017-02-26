@@ -1,3 +1,4 @@
+
 # coding: utf-8
 
 # ## Advanced Lane Finding Project
@@ -14,9 +15,10 @@
 # * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 # 
 # ---
-# ## First, I'll compute the camera calibration using chessboard images
+# ## Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
 
-# In[11]:
+# In[ ]:
+
 import pickle as pickle_module
 import os
 import numpy as np
@@ -25,47 +27,12 @@ import cv2
 from scipy.misc import imread, imresize
 import matplotlib.pyplot as plt
 
-# %matplotlib qt
+get_ipython().magic('matplotlib inline')
 
-# prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
-objp = np.zeros((6 * 9, 3), np.float32)
-objp[:, :2] = np.mgrid[0:9, 0:6].T.reshape(-1, 2)
-
-# Arrays to store object points and image points from all the images.
-objpoints = []  # 3d points in real world space
-imgpoints = []  # 2d points in image plane.
-
-
-def display_camera_images():
-    # Make a list of calibration images
-    calibration_images = glob.glob('camera_cal/calibration*.jpg')
-    # Step through the list and search for chessboard corners
-    for fname in calibration_images:
-        img = cv2.imread(fname)
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-        # Find the chessboard corners
-        ret, corners = cv2.findChessboardCorners(gray, (9, 6), None)
-
-        # If found, add object points, image points
-        if ret:
-            objpoints.append(objp)
-            imgpoints.append(corners)
-
-            # Draw and display the corners
-            img = cv2.drawChessboardCorners(img, (9, 6), corners, ret)
-            cv2.imshow('img', img)
-            cv2.waitKey(500)
-    cv2.destroyAllWindows()
-
-
-display_camera_images()
 
 # ## Camera calibration class
 
-# In[12]:
-
-# get_ipython().magic('matplotlib inline')
+# In[ ]:
 
 IMAGE_SIZE = (1280, 720)
 CALIBRATION_IMAGE_SIZE = (720, 1280, 3)
@@ -73,7 +40,6 @@ CALIBRATION_PICKLE_FILE = 'camera_calibration.pkl'
 IMAGES_PATH = 'camera_cal/calibration*.jpg'
 CHESSBOARD_ROWS = 6
 CHESSBOARD_COLS = 9
-
 
 class CameraCalibration:
     def __init__(self, image_size=IMAGE_SIZE, calibration_file=CALIBRATION_PICKLE_FILE):
@@ -85,7 +51,18 @@ class CameraCalibration:
 
     def undistort(self, image):
         return cv2.undistort(image, self.mtx, self.dist, None, self.mtx)
-
+    
+    def plot_images(self, image, image_path):
+        f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
+        f.suptitle(image_path, fontsize=50)
+        f.tight_layout()
+        ax1.imshow(image)
+        ax1.set_title('Original Image', fontsize=25)
+        undistorted_image = self.undistort(image)
+        ax2.imshow(undistorted_image)
+        ax2.set_title('Undistorted Image', fontsize=25)
+        plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.) 
+    
     @staticmethod
     def _calibrate(images_path=IMAGES_PATH, chessboard_rows=CHESSBOARD_ROWS, chessboard_cols=CHESSBOARD_COLS,
                    image_size=CALIBRATION_IMAGE_SIZE, calibration_pickle_file=CALIBRATION_PICKLE_FILE):
@@ -124,10 +101,30 @@ def pickle(object_to_pickle, file_path):
         pickle_module.dump(object_to_pickle, file_handle)
 
 
-        # In[13]:
+# In[ ]:
 
-
-CameraCalibration()
+calibration = CameraCalibration()
 
 
 # In[ ]:
+
+### Display Original and Calibrated Images side by side
+
+
+# In[ ]:
+
+
+images = glob.glob('camera_cal/calibration*.jpg')
+i = 0;
+for image_path in images:
+    img = cv2.imread(image_path)
+    if i == 1 : break
+    
+    calibration.plot_images(img, image_path)
+    i+=1
+
+
+# In[ ]:
+
+
+
