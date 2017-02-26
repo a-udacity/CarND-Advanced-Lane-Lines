@@ -27,7 +27,7 @@ import cv2
 from scipy.misc import imread, imresize
 import matplotlib.pyplot as plt
 
-get_ipython().magic('matplotlib inline')
+# get_ipython().magic('matplotlib inline')
 
 
 # ## Camera calibration class
