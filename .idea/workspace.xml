@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="165289ae-5702-4667-a37b-848c1a203922" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output_images/calibration1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output_images/calibration2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output_images/calibration3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output_images/calibration4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output_images/calibration5.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calibrate_camera.ipynb" afterPath="$PROJECT_DIR$/calibrate_camera.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calibrate_camera.py" afterPath="$PROJECT_DIR$/calibrate_camera.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples.ipynb" afterPath="$PROJECT_DIR$/examples.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,13 +18,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="calibrate_camera.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="calibrate_camera.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calibrate_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1306">
-              <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+            <state relative-caret-position="-1124">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <element signature="e#184#214#0" expanded="true" />
+                <element signature="e#183#213#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -39,8 +33,8 @@
       <file leaf-file-name="processing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/processing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1770">
-              <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="44" />
+            <state relative-caret-position="2175">
+              <caret line="145" column="23" lean-forward="false" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="23" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -48,12 +42,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="perspectivetransform.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perspectivetransform.py">
+      <file leaf-file-name="perspective_transform.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perspective_transform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-              <folding />
+            <state relative-caret-position="90">
+              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="writeup_template.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/writeup_template.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="writeup_advanced_lane_lines.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/writeup_advanced_lane_lines.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="770">
+                <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -61,10 +83,10 @@
       <file leaf-file-name="lane_detection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lane_detection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1406">
-              <caret line="83" column="24" lean-forward="false" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="24" />
+            <state relative-caret-position="2595">
+              <caret line="173" column="31" lean-forward="true" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
               <folding>
-                <element signature="e#0#53#0" expanded="true" />
+                <element signature="e#0#54#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,11 +95,9 @@
       <file leaf-file-name="detected_lanes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detected_lanes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="99" selection-end-column="44" />
-              <folding>
-                <element signature="e#823#832#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="26" column="56" lean-forward="true" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,29 +106,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>images</find>
-      <find>dists</find>
-      <find>annotate_image</find>
-      <find>is_current_fit_parallel</find>
-      <find>get_current_fit_distance</find>
-      <find>distance</find>
-      <find>VERTICAL_OFFSET</find>
-      <find>current_coef</find>
-      <find>ARROW_TIP_LENGTH</find>
-      <find>POLYNOMIAL_COEFFICIENT</find>
-      <find>LINE_SEGMENTS</find>
-      <find>_acceptable_lanes</find>
-      <find>process_image</find>
-      <find>SRC</find>
-      <find>image_path</find>
-      <find>annotate_image_plot</find>
-      <find>current_coefficient</find>
-      <find>calibration</find>
-      <find>perspective</find>
       <find>perspective_src</find>
-      <find>acceptable_lanes</find>
       <find>perspective_dst</find>
+      <find>pixels</find>
+      <find>x_average</find>
+      <find>best_fit</find>
+      <find>current_coefficient</find>
+      <find>current_fit_coefficient_poly</find>
+      <find>best_fit_poly</find>
+      <find>radius</find>
+      <find>line_base_pos</find>
+      <find>diffs</find>
+      <find>found</find>
+      <find>self.found</find>
+      <find>self.xs</find>
+      <find>n_images</find>
+      <find>camera_calibration</find>
+      <find>line_segments</find>
+      <find>image_offset</find>
+      <find>left_line</find>
+      <find>right_line</find>
+      <find>center_poly</find>
+      <find>curvature</find>
+      <find>self.offset</find>
+      <find>acceptable_lanes</find>
+      <find>dists</find>
       <find>plot_detected_lane_on_video</find>
+      <find>partial</find>
+      <find>image1</find>
+      <find>image6</find>
+      <find>image9</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,17 +147,18 @@
         <option value="$PROJECT_DIR$/processing.py" />
         <option value="$PROJECT_DIR$/calibrate-camera.py" />
         <option value="$PROJECT_DIR$/annotate.py" />
-        <option value="$PROJECT_DIR$/lane_detection.py" />
         <option value="$PROJECT_DIR$/perspectivetransform.py" />
-        <option value="$PROJECT_DIR$/calibrate_camera.py" />
         <option value="$PROJECT_DIR$/detected_lanes.py" />
+        <option value="$PROJECT_DIR$/calibrate_camera.py" />
+        <option value="$PROJECT_DIR$/lane_detection.py" />
+        <option value="$PROJECT_DIR$/writeup_advanced_lane_lines.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="height" value="868" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -368,10 +396,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="868" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24876674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27413672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -379,7 +407,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32860824" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39948782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -399,10 +427,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24876674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27413672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -482,51 +510,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/calibrate_camera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1124">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#183#213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2016.3/python_stubs/2800435/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="3567" column="8" lean-forward="false" selection-start-line="3567" selection-start-column="8" selection-end-line="3567" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/processing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1770">
-          <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="44" />
+        <state relative-caret-position="2175">
+          <caret line="145" column="23" lean-forward="false" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="23" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perspectivetransform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lane_detection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1406">
-          <caret line="83" column="24" lean-forward="false" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="24" />
+        <state relative-caret-position="2595">
+          <caret line="173" column="31" lean-forward="true" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
           <folding>
-            <element signature="e#0#53#0" expanded="true" />
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/detected_lanes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="99" selection-end-column="44" />
+        <state relative-caret-position="390">
+          <caret line="26" column="56" lean-forward="true" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perspective_transform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
           <folding>
-            <element signature="e#823#832#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/calibrate_camera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1306">
-          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding>
-            <element signature="e#184#214#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/writeup_template.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/writeup_advanced_lane_lines.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="770">
+            <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
