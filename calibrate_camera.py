@@ -1,4 +1,3 @@
-
 # coding: utf-8
 
 # ## Advanced Lane Finding Project - Step 1
@@ -29,6 +28,7 @@ IMAGES_PATH = 'camera_cal/calibration*.jpg'
 CHESSBOARD_ROWS = 6
 CHESSBOARD_COLS = 9
 
+
 class CameraCalibration:
     def __init__(self, image_size=IMAGE_SIZE, calibration_file=CALIBRATION_PICKLE_FILE):
         # Get camera calibration
@@ -39,7 +39,7 @@ class CameraCalibration:
 
     def undistort(self, image):
         return cv2.undistort(image, self.mtx, self.dist, None, self.mtx)
-    
+
     def plot_images(self, image, image_path, save=False):
         f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
         f.suptitle(image_path, fontsize=40)
@@ -52,9 +52,10 @@ class CameraCalibration:
         plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
         if save:
             name = os.path.basename(image_path)
-            f.savefig('./output_images/' + '{}{}'.format(name.split('.')[0], '_calibrated.png')) # save the figure to file
-            plt.close(f) # close the figure
-    
+            f.savefig(
+                './output_images/' + '{}{}'.format(name.split('.')[0], '_calibrated.png'))  # save the figure to file
+            plt.close(f)  # close the figure
+
     @staticmethod
     def _calibrate(images_path=IMAGES_PATH, chessboard_rows=CHESSBOARD_ROWS, chessboard_cols=CHESSBOARD_COLS,
                    image_size=CALIBRATION_IMAGE_SIZE, calibration_pickle_file=CALIBRATION_PICKLE_FILE):
@@ -77,9 +78,9 @@ class CameraCalibration:
                 object_points.append(obj)
                 image_points.append(corners)
 
-        calibration = (object_points, image_points)
-        pickle(calibration, calibration_pickle_file)
-        return calibration
+        camera_calibration = (object_points, image_points)
+        pickle(camera_calibration, calibration_pickle_file)
+        return camera_calibration
 
 
 def unpickle(file_path):
@@ -100,16 +101,15 @@ calibration = CameraCalibration()
 
 # In[10]:
 
-def plot_some_camera_calibration_images(save=False):
+def plot_some_camera_calibration_images():
     images = glob.glob('camera_cal/calibration*.jpg')
     i = 0
     for image_path in images:
         img = cv2.imread(image_path)
-        if i == 5 : break
+        if i == 5: break
 
         calibration.plot_images(img, image_path)
         i += 1
-
 
 # In[11]:
 
@@ -122,6 +122,3 @@ def plot_some_camera_calibration_images(save=False):
 
 
 # In[ ]:
-
-
-
