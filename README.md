@@ -1,8 +1,6 @@
-##Writeup Template
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
+###Writeup / README
 ---
-
 **Advanced Lane Finding Project**
 
 The goals / steps of this project are the following:
@@ -18,11 +16,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./output_images/calibration1_undistorted.png "Undistorted"
-[image2]: ./output_images/calibration10_undistorted.png "Undistorted"
-[image3]: ./output_images/calibration11_undistorted.png "Undistorted"
-[image4]: ./output_images/calibration12_undistorted.png "Undistorted"
-[image5]: ./output_images/calibration13_undistorted.png "Undistorted"
+[image1]: ./output_images/calibration1_undistorted.png "Undistorted Chessboard"
+[image2]: ./output_images/calibration10_undistorted.png "Undistorted Chessboard"
+[image3]: ./output_images/calibration11_undistorted.png "Undistorted Chessboard"
+[image4]: ./output_images/calibration12_undistorted.png "Undistorted Chessboard"
+[image5]: ./output_images/calibration13_undistorted.png "Undistorted Chessboard"
+[image5b]: ./output_images/test1_undistorted.png "Undistorted actual image"
 [image6]: ./output_images/test1.jpg "Road Transformed"
 [image7]: ./examples/binary_combo_example.jpg "Binary Example"
 [image8]: ./examples/warped_straight_lines.jpg "Warp Example"
@@ -37,9 +36,6 @@ The goals / steps of this project are the following:
 [image17]: ./output_images/test6_annotated.png "Output"
 [video18]: https://youtu.be/MB3E06JQVwQ "Video"
 
-
-###Writeup / README
-
 ###Camera Calibration
 
 ####1. Briefly state how you computed the camera matrix and distortion coefficients. I have provided 5 images of camera calibration side by side.
@@ -52,8 +48,7 @@ I used the cv2.findChessboardCorners() method to find the imgpoints for each of 
 
 Once we have these values (pickled for later use) we can use cv2.calibrateCamera() to get the camera matrix and distortion coefficients. 
 Having those we can now undistort a new image using the undistort method in the class that calls cv2.undistort().
-I then created a helper function called CameraCalibration->plot_images() to apply the distortion correction to the test images using the `cv2.undistort()` function and obtained this result: 
-
+I then created a helper function called CameraCalibration->plot_images() to apply the distortion correction to the test images using the `cv2.undistort()` function. Below are the chessboard images undistorted:
 ![alt text][image1]
 ![alt text][image2]
 ![alt text][image3]
@@ -64,16 +59,18 @@ I then created a helper function called CameraCalibration->plot_images() to appl
 
 ####1. Provide an example of a distortion-corrected image.
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![alt text][image6]
-####2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
+![alt text][image5b]
+
+####2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a threshold binary image.  Provide an example of a binary image result.
 I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
 
-![alt text][image7]
+![alt text][image6]
 
 ####3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
 The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
 
+![alt text][image7]
 ```
 src = np.float32(
     [[(img_size[0] / 2) - 55, img_size[1] / 2 + 100],
