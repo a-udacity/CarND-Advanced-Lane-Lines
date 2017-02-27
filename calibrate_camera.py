@@ -1,23 +1,11 @@
 
 # coding: utf-8
 
-# ## Advanced Lane Finding Project
-# 
-# The goals / steps of this project are the following:
-# 
-# * Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
-# * Apply a distortion correction to raw images.
-# * Use color transforms, gradients, etc., to create a thresholded binary image.
-# * Apply a perspective transform to rectify binary image ("birds-eye view").
-# * Detect lane pixels and fit to find the lane boundary.
-# * Determine the curvature of the lane and vehicle position with respect to center.
-# * Warp the detected lane boundaries back onto the original image.
-# * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
-# 
+# ## Advanced Lane Finding Project - Step 1
 # ---
 # ## Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
 
-# In[ ]:
+# In[7]:
 
 import pickle as pickle_module
 import os
@@ -32,7 +20,7 @@ import matplotlib.pyplot as plt
 
 # ## Camera calibration class
 
-# In[ ]:
+# In[8]:
 
 IMAGE_SIZE = (1280, 720)
 CALIBRATION_IMAGE_SIZE = (720, 1280, 3)
@@ -52,16 +40,20 @@ class CameraCalibration:
     def undistort(self, image):
         return cv2.undistort(image, self.mtx, self.dist, None, self.mtx)
     
-    def plot_images(self, image, image_path):
+    def plot_images(self, image, image_path, save=False):
         f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
-        f.suptitle(image_path, fontsize=50)
+        f.suptitle(image_path, fontsize=40)
         f.tight_layout()
         ax1.imshow(image)
-        ax1.set_title('Original Image', fontsize=25)
+        ax1.set_title('Original Image', fontsize=20)
         undistorted_image = self.undistort(image)
         ax2.imshow(undistorted_image)
-        ax2.set_title('Undistorted Image', fontsize=25)
-        plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.) 
+        ax2.set_title('Undistorted Image', fontsize=20)
+        plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
+        if save:
+            name = os.path.basename(image_path)
+            f.savefig('./output_images/' + '{}{}'.format(name.split('.')[0], '_calibrated.png')) # save the figure to file
+            plt.close(f) # close the figure
     
     @staticmethod
     def _calibrate(images_path=IMAGES_PATH, chessboard_rows=CHESSBOARD_ROWS, chessboard_cols=CHESSBOARD_COLS,
@@ -101,27 +93,32 @@ def pickle(object_to_pickle, file_path):
         pickle_module.dump(object_to_pickle, file_handle)
 
 
-# In[ ]:
+# In[9]:
 
 calibration = CameraCalibration()
 
 
-# In[ ]:
+# In[10]:
+
+def plot_some_camera_calibration_images(save=False):
+    images = glob.glob('camera_cal/calibration*.jpg')
+    i = 0
+    for image_path in images:
+        img = cv2.imread(image_path)
+        if i == 5 : break
+
+        calibration.plot_images(img, image_path)
+        i += 1
+
+
+# In[11]:
 
 ### Display Original and Calibrated Images side by side
 
 
-# In[ ]:
+# In[12]:
 
-
-images = glob.glob('camera_cal/calibration*.jpg')
-i = 0;
-for image_path in images:
-    img = cv2.imread(image_path)
-    if i == 1 : break
-    
-    calibration.plot_images(img, image_path)
-    i+=1
+# plot_some_camera_calibration_images()
 
 
 # In[ ]:
