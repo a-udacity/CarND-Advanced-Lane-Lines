@@ -68,7 +68,6 @@ I used yellow threshold (on HSV), Sobel gradient thresholds, and a 2D filter (us
 
 ####3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
 The Perspective class inside perspective.py takes care of this. My source and destination points are defined in detected_lanes.py as shown below:
 
 ```
@@ -129,7 +128,6 @@ Here are example of my result on a all the test images:
 ![alt text][image15]
 ![alt text][image16]
 ![alt text][image17]
-![alt text][image18]
 
 ---
 
