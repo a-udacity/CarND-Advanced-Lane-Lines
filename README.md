@@ -90,11 +90,8 @@ detected_lanes_config = dict(
 )
 
 ```
-An example of perspective transform:
 
-![alt text][image8]
-
-This resulted in the following source and destination points:
+TODO: This resulted in the following source and destination points:
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
@@ -105,21 +102,24 @@ This resulted in the following source and destination points:
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-![alt text][image9]
+
+![alt text][image8]
 
 ####4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+Polynomials for left and right lanes are fit on a history of x and y points in the update function in the Line class in lane_detection.py (lines 24-45).
 
-![alt text][image10]
+![alt text][image9]
 
 ####5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines # through # in my code in `my_other_file.py`
+I calculate the curvature in the curvature function (lines 124-129) in processing.py.
 
 ####6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+I implemented this step in lines # 105 through # 129 in my code in `lane_detection.py` in the function `_draw_info` and `_draw_overlay` of class LaneDetector. 
+Here are example of my result on a all the test images:
+
 
 ![alt text][image10]
 ![alt text][image11]
@@ -145,5 +145,9 @@ Here's a [link to my video result](https://youtu.be/MB3E06JQVwQ)
 
 ####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+Getting the pipeline to be of robust against shadows and at the same time capable of detecting yellow lane lines on white ground was difficult. 
+I took the approach that lines should never have very low saturation values, i.e. Black. 
+Setting a minimal value for the saturation helped when paired with the x gradient and absolute gradient threshold. 
+Detecting two lanes was also problematic but using a threshold distance solved the problem.
+I struggled the most in implementing the continuous appending of detected lines and then restarting when the buffer of previous lines emptied.
 
