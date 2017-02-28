@@ -21,8 +21,7 @@ The goals / steps of this project are the following:
 [image3]: ./output_images/calibration11_undistorted.png "Undistorted Chessboard"
 [image4]: ./output_images/calibration12_undistorted.png "Undistorted Chessboard"
 [image5]: ./output_images/calibration13_undistorted.png "Undistorted Chessboard"
-[image5b]: ./output_images/test1_undistorted.png "Undistorted actual image"
-[image6]: ./output_images/test1.jpg "Road Transformed"
+[image6]: ./output_images/test1_undistorted.png "Undistorted actual image"
 [image7]: ./examples/binary_combo_example.jpg "Binary Example"
 [image8]: ./examples/warped_straight_lines.jpg "Warp Example"
 [image9]: ./examples/color_fit_lines.jpg "Fit Visual"
@@ -59,7 +58,7 @@ I then created a helper function called CameraCalibration->plot_images() to appl
 
 ####1. Provide an example of a distortion-corrected image.
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![alt text][image5b]
+![alt text][image6]
 
 ####2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a threshold binary image.  Provide an example of a binary image result.
 I used yellow threshold (on HSV), Sobel gradient thresholds, and a 2D filter (using cv2.filter2D) to generate a binary image (threshold's steps at function lane_mask in processing.py). Here's an example of my output for this step:
@@ -117,7 +116,7 @@ I calculate the curvature in the curvature function (lines 124-129) in processin
 ####6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 I implemented this step in lines # 105 through # 129 in my code in `lane_detection.py` in the function `_draw_info` and `_draw_overlay` of class LaneDetector. 
-Here are example of my result on a all the test images:
+Here are example of my result on all the test images:
 
 
 ![alt text][image10]
