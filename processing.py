@@ -17,7 +17,7 @@ YELLOW_LOWER = (20, 50, 150)
 YELLOW_UPPER = (40, 255, 255)
 
 
-def lane_mask(image, vertical_offset=0):
+def lane_mask(image, vertical_offset=400):
     window = image[vertical_offset:, :, :]
     yellow = extract_yellow(window)
     highlights = extract_highlights(window[:, :, 0])
